@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>Printer's operation - @ViewBag.Title
+</title>
+<link href="@Url.Content("~/content/bootstrap.min.css")" rel="stylesheet">
+<link href="@Url.Content("~/content/bootstrap-responsive.min.css")" rel="stylesheet">
+<link href="@Url.Content("~/content/PrinterOps.css")" rel="stylesheet">
+<script src="@Url.Content("~/scripts/jquery-1.10.2.min.js")"></script>
+<script src="@Url.Content("~/scripts/bootstrap.min.js")"></script>
+ @System.Web.Optimization.Styles.Render("~/Content/datetime-css")
+
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span4 offset2">
+			
+				<h1>Printer's operation</h1>
+				<em>Учёт расхода бумаги, тонера и комплектующих деталей.</em>
+			
+		</div>
+		<div class="span2">
+		
+		</div>
+	</div>
+<!-- /div -->
+<!--div class="container" -->
+		<div class="row-fluid">
+			<div class="span12 ">
+				<ul class="nav nav-pills">
+                <li class="active"><a href="@Url.Action("PrOps", "PrOps")"><i class="icon-home"></i>Главная</a></li>
+					<li class="dropdown">
+						<a  class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-calendar"></i>За период <b class="caret"></b></a>
+				
+						<ul class="dropdown-menu">
+							<li>
+								<a href="@Url.Action("Index", "SEL_YM")">За месяц</a>
+							</li>
+							<li>
+								<a href="@Url.Action("Index", "SEL_YMD")">За день</a>
+							</li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a  class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-user"></i>По подразделению<b class="caret"></b></a>
+					
+						<ul class="dropdown-menu">
+							<li>
+								<a href="@Url.Action("Index", "SEL_YMB")">За месяц</a>
+							</li>
+							<li>
+								<a href="@Url.Action("Index", "SEL_YMDB")">За день</a>
+							</li>
+						</ul>
+					</li>
+                    <!-- Printer features -->
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-signal"></i>Нагрузка принтера<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        <li>
+                            <a href="@Url.Action("Index","PrinterLOadY")">За год</a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index","PrinterLOadYM")">За месяц</a>
+                        </li>
+                        
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-print"></i>Состояние принтера<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="@Url.Action("State", "PrinterState")"><i class="icon-random"></i>Ethernet интерфейс</a></li>
+                        <li><a href="@Url.Action("USBState", "USBPrinterState")"><i class="icon-arrow-right"></i>USB интерфейс</a></li>
+                    </ul>
+                    </li>
+                    <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-tint"></i>Состояние тонера<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        <li>
+                            <a href="@Url.Action("Index", "PrinterToner")"><i class="icon-eye-open"></i>Общее состояние</a>
+                        </li>
+                        
+                            <li>
+                                <a href="@Url.Action("Index","NeededCartrige")"><i class="icon-tasks"></i>Оставшиеся дни до замены</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("CountCartridge", "CountCartridge")"><i class="icon-filter"></i>Количество картриджей</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-wrench"></i>Настройки<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="@Url.Action("BranchSerialIndex", "BranchSerial")"><i class="icon-list"></i>Филиалы</a>
+                            </li>
+                        </ul>
+                    </li>
+				</ul>
+		    </div>	
+		</div>
+
+        <div class="row-fluid">
+			<div class="span10">@RenderBody()</div>
+		</div>	
+	
+</div>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Printer's operation - Report, @ViewBag.Title</title>
+<link href="@Url.Content("~/content/bootstrap.css")" rel="stylesheet">
+<link href="@Url.Content("~/content/PrinterOps.css")" rel="stylesheet">
+<script src="@Url.Content("~/scripts/jquery-1.10.2.js")"></script>
+<script src="@Url.Content("~/scripts/bootstrap.js")"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row-fluid">
+			<div class="span10">@RenderBody()</div>
+		</div>
+    </div>
+</body>
+</html>
