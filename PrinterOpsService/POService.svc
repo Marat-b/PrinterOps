@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="PrinterOpsService.POService" CodeBehind="POService.svc.cs" %>
