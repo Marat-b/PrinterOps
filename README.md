@@ -1,1 +1,2 @@
 # PrinterOps
+Automated system that accumulates data on printed sheets of paper (data is broken down by document name, user, number of printed sheets, print date, etc.), the amount of toner remaining in the printer (for colour and black and white printers) in absolute and percentage terms. The factory name and serial number of the printer and other required information can be retrieved. All information is displayed via the web interface.
