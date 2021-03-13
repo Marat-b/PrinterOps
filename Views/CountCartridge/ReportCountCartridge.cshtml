@@ -1,0 +1,32 @@
+﻿@model IEnumerable<PrOps.Models.ReportCartridgeStateView>
+
+@{
+    ViewBag.Title = "Заявка на тонер-картриджи";
+    Layout = "~/Views/Shared/_PrinterOpsReport.cshtml";
+}
+
+<h2>Заявка на тонер-картриджи на @ViewBag.inputDate</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                Модель
+            </th>
+            <th>
+                Количество
+            </th>
+        </tr>
+    </thead>
+    @foreach(var item in Model){
+        <tr>
+            <td>
+                @Html.DisplayFor(model=>item.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(model=>item.Sum)
+            </td>
+        </tr>
+    }
+
+</table>

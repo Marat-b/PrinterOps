@@ -1,0 +1,105 @@
+﻿@using PrOps.Classes
+@model IEnumerable<PrOps.sp_SEL_TONER_CriticalResult>
+
+@{
+    ViewBag.Title = "Критическое состояние тонера";
+}
+
+<div class="page-header"><h3>Критическое состояние тонера (15 % оставшегося тонера)</h3></div>
+
+@using (Html.BeginForm("PrinterTonerNeeded", "PrinterTonerCritical", FormMethod.Post, new { @target = "_blank" }))
+{
+
+
+
+<fieldset>
+<legend>Заявка на картриджи</legend>
+<div class="row-fluid">
+<div class="controls controls-row">
+<div class="span2">
+<label>Месяцы</label>
+</div>
+<div class="span2"><label>Проценты</label>
+</div>
+</div>
+</div>
+<div class="row-fluid">
+<div class="controls controls-row">
+@{
+    List<SelectListItem> months = new List<SelectListItem>();
+    for (int iMonth = 0; iMonth < 4; iMonth++)
+    {
+        months.Add(new SelectListItem() { Text = iMonth.ToString() });
+    }
+}
+<div class="span2">
+@Html.DropDownList("Months", months)
+<span class="help-block">Количество месяцев подсчёта тонера.</span>
+</div>
+@{
+    List<SelectListItem> percents = new List<SelectListItem>();
+    for (int iPercent = 0; iPercent < 100; iPercent++)
+    {
+        if ((iPercent % 5) == 0)
+        {
+            percents.Add(new SelectListItem() { Text = iPercent.ToString() });
+        }
+    }
+}
+<div class="span2">
+
+@Html.DropDownList("Percents", percents)
+<span class="help-block">Количество оставшегося тонера в процентах.</span>
+</div>
+
+<div class="span2">
+<input type="submit" value="Заявка на картриджи" class="btn  btn-info" />
+<!-- a class="btn btn-info" href="/PrinterTonerCritical/PrinterTonerNeeded" target="_blank">Заявка на картриджи</a --> 
+<!-- Html.ActionLink("Заявка на картриджи", "PrinterTonerNeeded", "PrinterTonerCritical", null, new { target = "_blank", class = "btn btn-info" }) -->
+</div>
+</div>
+</div>
+</fieldset>
+
+
+}
+<div class="row-fluid">
+<div class="span10">
+<table class="table table-hover table-bordered">
+<thead>
+
+<tr>
+<th rowspan="2">Логическое имя</th>
+<th rowspan="2">Серийный номер</th>
+<th rowspan="2">Модель</th>
+<th rowspan="2">IP адрес</th>
+<th rowspan="2">Кол-во распечатанных страниц</th>
+<th colspan="3">Чёрный</th>
+<th rowspan="2">Последнее обновление</th>
+</tr>
+<tr>
+<th>Максимальный уровень</th>
+<th>Оставшийся уровень</th>
+<th>Оставшийся уровень в %</th>
+
+</tr>
+</thead>
+@foreach (var item in Model)
+{
+    <tr>
+<td>@Html.DisplayFor(Item=>item.printer_name)</td>
+<td>@Html.DisplayFor(Item=>item.SerialNumber)</td>
+<td>@Html.DisplayFor(Item=>item.model)</td>
+<td>@Html.DisplayFor(Item=>item.IPAddress)</td>
+<td>@Html.DisplayFor(Item=>item.PageCount)</td>
+<td>@Html.DisplayFor(Item=>item.MaxLevelBlack)</td>
+<td>@Html.DisplayFor(Item=>item.RemainBlack)</td>
+<td>@Html.DisplayFor(Item=>item.PercentBlack)%</td>
+<td>@Html.DisplayFor(Item=>item.LastUpdate)</td>
+    </tr>
+    
+    
+}
+</table>
+</div>
+</div>

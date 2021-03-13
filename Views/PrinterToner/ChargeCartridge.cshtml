@@ -1,0 +1,23 @@
+﻿@model IEnumerable<PrOps.Models.ChargeCartridge>
+<table class="table table-bordered table-hover">
+<thead>
+<tr>
+<th>Уровень тонера до замены</th>
+<th>Уровень тонера после замены</th>
+<th>Распечатано страниц</th>
+<th>Цвет тонера</th>
+<th>Дата установки</th>
+</tr>
+</thead>
+@foreach (var cc in Model)
+{
+    <tr>
+    <td>@cc.OldRemainToner</td>
+    <td>@cc.NewRemainToner</td>
+    <td>@cc.PageCount</td>
+    <td>@cc.ColorToner</td>
+    <td>@cc.ChargeDate</td>
+    
+    </tr>
+}
+</table>

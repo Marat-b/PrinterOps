@@ -1,0 +1,46 @@
+﻿@model IEnumerable< PrOps.Models.RemainDaysView2>
+@{
+    ViewBag.Title = "Остаток дней";
+}
+
+<h3>Количество дней оставшиеся перед заменой картриджа</h3>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Модель</th>
+            <th>Серийный номер</th>
+            <th>Номер филиала</th>
+            <th>IP-адрес</th>
+            <th>Количество дней</th>
+            <th>Дата окончания тонера</th>
+        </tr>
+    </thead>
+    
+    @foreach (var item in Model)
+    {
+        if (item.ChargeDate != null)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(Item => item.Model)
+                </td>
+                <td>
+                    @Html.DisplayFor(Item=>item.SerialNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(Item => item.BranchNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(Item=>item.IPAddress)
+                </td>
+                
+                <td>
+                    @Html.DisplayFor(Item => item.NumberDays)
+                </td>
+                <td>
+                    @Html.DisplayFor(Item=>item.IssueDate)
+                </td>
+            </tr>
+        }
+    }
+</table>

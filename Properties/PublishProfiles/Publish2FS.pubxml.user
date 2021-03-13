@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile>2014-06-16T16:16:26.0000000+06:00</TimeStampOfAssociatedLegacyPublishXmlFile>
+    <_PublishTargetUrl>C:\SOFTZ\DEploy\PrOps</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>01/02/2015 17:46:32</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.dll">
+      <publishTime>01/02/2015 00:12:42</publishTime>
+    </File>
+    <File Include="bin/AutoMapper.Net4.dll">
+      <publishTime>01/02/2015 00:12:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Helpers.dll">
+      <publishTime>12/30/2014 21:14:12</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>12/30/2014 21:14:12</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>01/02/2015 17:46:32</publishTime>
+    </File>
+    <File Include="bin/PrOps.dll">
+      <publishTime>01/26/2015 10:26:34</publishTime>
+    </File>
+    <File Include="bin/System.Web.Abstractions.dll">
+      <publishTime>09/26/2012 03:16:08</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>12/30/2014 21:14:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>12/30/2014 22:01:10</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>01/02/2015 17:46:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>12/30/2014 21:14:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>12/30/2014 21:14:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>12/30/2014 21:14:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>12/30/2014 21:14:12</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>01/02/2015 17:46:32</publishTime>
+    </File>
+    <File Include="bin/WebMatrix.Data.dll">
+      <publishTime>12/30/2014 21:14:12</publishTime>
+    </File>
+    <File Include="bin/WebMatrix.WebData.dll">
+      <publishTime>12/30/2014 21:14:12</publishTime>
+    </File>
+    <File Include="Content/bootstrap-responsive.css">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Content/bootstrap-responsive.min.css">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Content/PrinterOps.css">
+      <publishTime>06/03/2014 11:38:46</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>06/02/2014 18:04:10</publishTime>
+    </File>
+    <File Include="Content/smalot-datetimepicker/bootstrap-datetimepicker.css">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Content/smalot-datetimepicker/bootstrap-datetimepicker.min.css">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Content/themes/base/bootstrap-responsive.css">
+      <publishTime>05/17/2013 11:21:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/bootstrap-responsive.min.css">
+      <publishTime>05/17/2013 11:21:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/bootstrap.css">
+      <publishTime>05/17/2013 11:21:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/bootstrap.min.css">
+      <publishTime>05/17/2013 11:21:08</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/glyphicons-halflings-white.png">
+      <publishTime>05/17/2013 11:21:06</publishTime>
+    </File>
+    <File Include="Content/themes/base/images/glyphicons-halflings.png">
+      <publishTime>05/17/2013 11:21:06</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>02/24/2014 11:40:06</publishTime>
+    </File>
+    <File Include="img/glyphicons-halflings-white.png">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="img/glyphicons-halflings.png">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>01/02/2015 17:46:38</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>01/02/2015 17:30:58</publishTime>
+    </File>
+    <File Include="Scripts/datetimepicker.js">
+      <publishTime>01/02/2015 20:35:28</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>12/30/2014 21:19:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>12/30/2014 21:19:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>12/30/2014 21:19:16</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/bootstrap-datetimepicker.js">
+      <publishTime>01/02/2015 20:02:06</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/bootstrap-datetimepicker.min.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.ar.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.bg.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.ca.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.cs.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.da.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.de.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.ee.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.el.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.es.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.fi.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.fr.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.he.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.hr.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.hu.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.id.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.is.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.it.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.ja.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.ko.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.lt.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.lv.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.ms.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.nb.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.nl.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.no.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.pl.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.pt-BR.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.pt.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.ro.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.rs-latin.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.rs.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.ru.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.sk.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.sl.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.sv.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.sw.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.th.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.tr.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.ua.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.uk.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Scripts/smalot-datetimepicker/locales/bootstrap-datetimepicker.zh-TW.js">
+      <publishTime>01/02/2015 17:31:00</publishTime>
+    </File>
+    <File Include="Views/BranchSerial/BranchSerialEdit.cshtml">
+      <publishTime>01/23/2015 16:16:34</publishTime>
+    </File>
+    <File Include="Views/BranchSerial/BranchSerialIndex.cshtml">
+      <publishTime>01/26/2015 10:19:21</publishTime>
+    </File>
+    <File Include="Views/CountCartridge/CountCartridge.cshtml">
+      <publishTime>01/26/2015 10:14:06</publishTime>
+    </File>
+    <File Include="Views/CountCartridge/ReportCountCartridge.cshtml">
+      <publishTime>01/11/2015 22:35:38</publishTime>
+    </File>
+    <File Include="Views/CountCartridge/ReportCountCartridge2.cshtml">
+      <publishTime>01/23/2015 19:45:03</publishTime>
+    </File>
+    <File Include="Views/NeededCartrige/Index.cshtml">
+      <publishTime>01/26/2015 10:16:37</publishTime>
+    </File>
+    <File Include="Views/PrinterLoadY/Index.cshtml">
+      <publishTime>06/03/2014 12:40:40</publishTime>
+    </File>
+    <File Include="Views/PrinterLoadYM/Index.cshtml">
+      <publishTime>06/03/2014 12:41:32</publishTime>
+    </File>
+    <File Include="Views/PrinterState/State.cshtml">
+      <publishTime>06/19/2014 17:59:16</publishTime>
+    </File>
+    <File Include="Views/PrinterToner/ChargeCartridge.cshtml">
+      <publishTime>09/25/2014 17:38:48</publishTime>
+    </File>
+    <File Include="Views/PrinterToner/Index.cshtml">
+      <publishTime>01/23/2015 20:09:58</publishTime>
+    </File>
+    <File Include="Views/PrOps/PrOps.cshtml">
+      <publishTime>03/07/2014 09:50:02</publishTime>
+    </File>
+    <File Include="Views/SEL_YM/Index.cshtml">
+      <publishTime>03/07/2014 09:56:34</publishTime>
+    </File>
+    <File Include="Views/SEL_YM/Index2.cshtml">
+      <publishTime>02/24/2014 15:10:12</publishTime>
+    </File>
+    <File Include="Views/SEL_YMB/Index.cshtml">
+      <publishTime>03/07/2014 09:45:10</publishTime>
+    </File>
+    <File Include="Views/SEL_YMD/Index.cshtml">
+      <publishTime>03/07/2014 09:44:24</publishTime>
+    </File>
+    <File Include="Views/SEL_YMDB/Index.cshtml">
+      <publishTime>03/07/2014 09:46:02</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>02/24/2014 11:40:06</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>02/24/2014 11:40:06</publishTime>
+    </File>
+    <File Include="Views/Shared/_PrinterOpsReport.cshtml">
+      <publishTime>01/04/2015 15:40:32</publishTime>
+    </File>
+    <File Include="Views/Shared/_PrintersOps.cshtml">
+      <publishTime>01/23/2015 12:49:45</publishTime>
+    </File>
+    <File Include="Views/USBPrinterState/USBState.cshtml">
+      <publishTime>09/10/2014 16:57:18</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>12/30/2014 22:56:02</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>03/05/2014 12:55:34</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/26/2015 10:26:35</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,83 @@
+﻿@using PrOps.Classes
+@model IEnumerable<PrOps.Models.CartridgeStateView2>
+
+@{
+    ViewBag.Title = "Количество тонер-картриджей";
+}
+
+<h3>Количество тонер-картриджей необходимых на установленную дату</h3>
+
+<!-- "CountCartridge", "CountCartridge", FormMethod.Post, new { class = "form-inline" }-->
+
+<div class="row-fluid">
+    <div class="control-group">
+        @using (Html.BeginForm())
+        {
+
+            <div class="span6">
+
+                <div class="form-horizontal">
+                    <input size="16" type="text" value="@ViewBag.DTP"  id="datetimepicker" name="datetimepicker">
+                    <!--/div>
+                    <div class="span2"-->
+
+                    <button type="submit" class="btn btn-primary"><span class="icon-calendar icon-white"></span> Установить дату</button>
+                </div>
+
+            </div>
+
+        }
+        <div class="span2">
+            @Html.ActionlinkWithSpanForIcon("Сформировать отчёт", "ReportCountCartridge", "CountCartridge", new { inputDate = @ViewBag.DTP }, new { @class = "btn btn-success", @target = "_blank" }, "icon-inbox icon-white")
+        </div>
+
+        <div class="span2">
+            @Html.ActionlinkWithSpanForIcon("Сформировать заявку", "ReportCountCartridge2", "CountCartridge", new { inputDate = @ViewBag.DTP }, new { @class = "btn btn-success", @target = "_blank" }, "icon-shopping-cart icon-white")
+        </div>
+    </div>
+</div>
+
+            
+        <div class="row-fluid">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>
+                            Модель
+                        </th>
+                        <th>Серийный номер</th>
+                        <th>Номер филиала</th>
+                        <th>IP-адрес</th>
+                        <th>Количество картриджей</th>
+                    </tr>
+                </thead>
+                @foreach (var item in Model)
+        {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(Item=>item.Model)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(Item=>item.SerialNumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(Item=>item.BranchNumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(Item=>item.IPAddress)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(Item=>item.CountCartridge)
+                        </td>
+
+                    </tr>
+        }
+
+            </table>
+
+        </div>
+
+        @section Scripts{
+            @System.Web.Optimization.Scripts.Render("~/bundles/datetime-js")
+        }
+

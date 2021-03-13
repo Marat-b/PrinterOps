@@ -1,0 +1,76 @@
+﻿@model IEnumerable<PrOps.sp_SEL_LOAD_YMResult>
+
+@{
+    ViewBag.Title = "Нагрузка за месяц";
+}
+<div class="page-header"><h4>Нагрузка за месяц</h4></div>
+
+@using (Html.BeginForm())
+{
+<div class="row-fluid">
+<div class="span2 offset2">
+<span class="label label-info">Год</span>
+@{
+    List<SelectListItem> list = new List<SelectListItem>();
+    for (int iYear = DateTime.Today.Year; iYear > 2012; iYear--)
+    {
+        list.Add(new SelectListItem() { Text = iYear.ToString(), Selected = iYear.ToString() == ViewBag.GetYear.ToString() ? true : false });
+    }
+}
+@Html.DropDownList("Year", list)
+</div>
+<div class="span2">
+<span class="label label-info">Месяц</span>
+@{  string strSelected = ViewBag.GetMonth.ToString();
+    List<SelectListItem> listMonth = new List<SelectListItem>();
+    listMonth.Add(new SelectListItem() { Text = "Январь", Value = "1", Selected = "1" == strSelected ? true : false});
+    listMonth.Add(new SelectListItem() { Text = "Февраль", Value = "2", Selected = "2" == strSelected ? true : false });
+    listMonth.Add(new SelectListItem() { Text = "Март", Value = "3", Selected = "3" == strSelected ? true : false });
+    listMonth.Add(new SelectListItem() { Text = "Апрель", Value = "4", Selected = "4" == strSelected ? true : false });
+    listMonth.Add(new SelectListItem() { Text = "Май", Value = "5", Selected = "5" == strSelected ? true : false });
+    listMonth.Add(new SelectListItem() { Text = "Июнь", Value = "6", Selected = "6" == strSelected ? true : false });
+    listMonth.Add(new SelectListItem() { Text = "Июль", Value = "7", Selected = "7" == strSelected ? true : false });
+    listMonth.Add(new SelectListItem() { Text = "Август", Value = "8", Selected = "8" == strSelected ? true : false });
+    listMonth.Add(new SelectListItem() { Text = "Сентябрь", Value = "9", Selected = "9" == strSelected ? true : false });
+    listMonth.Add(new SelectListItem() { Text = "Октябрь", Value = "10", Selected = "10" == strSelected ? true : false });
+    listMonth.Add(new SelectListItem() { Text = "Ноябрь", Value = "11", Selected = "11" == strSelected ? true : false });
+    listMonth.Add(new SelectListItem() { Text = "Декабрь", Value = "12", Selected = "12" == strSelected ? true : false });
+    
+ }
+
+@Html.DropDownList("Month", listMonth)
+</div>
+
+
+<div class="span2 ">
+<input type="submit" value="Выбрать" class="btn btn-info"/>
+</div>
+
+</div>
+}
+
+<div class="row-fluid">
+<div class="span10">
+<table class="table table-hover table-bordered">
+<tr>
+    <td>Серийный номер</td>
+    <td>Модель</td>
+    <td>Логическое имя</td>
+    <td>IP адрес</td>
+    <td>Распечатано страниц</td>
+</tr>      
+@foreach(var item in Model)
+{
+<tr>
+    <td>@Html.DisplayFor(Item=>item.SerialNumber)</td>
+    <td>@Html.DisplayFor(Item=>item.Model)</td>
+    <td>@Html.DisplayFor(Item=>item.printer_name)</td>
+    <td>@Html.DisplayFor(Item=>item.IPAddress)</td>
+    <td>@Html.DisplayFor(Item=>item.PagePrinted)</td>
+</tr>      
+      
+      
+ }
+ </table>
+ </div>
+ </div>

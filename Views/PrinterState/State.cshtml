@@ -1,0 +1,50 @@
+﻿@using PrOps.Classes
+@model IEnumerable<PrOps.sp_SEL_PrinterStateResult>
+
+@{
+    ViewBag.Title = "Состояние принтера";
+}
+
+<div class="page-header"><h3>Состояние принтера</h3></div>
+
+<div class="row-fluid">
+<div class="span12">
+<table class="table table-bordered">
+<thead>
+
+<tr>
+<th >Логическое имя</th>
+<th >Серийный номер</th>
+<th >Модель</th>
+<th >IP адрес</th>
+<th >Кол-во распечатанных страниц</th>
+<th>Оставшийся уровень чёрного тонера в %</th>
+<th>Сообщение на дисплее</th>
+<th>Сообщение о состоянии</th>
+<th>Время непрерывной работы</th>
+<th >Последнее обновление</th>
+
+
+
+</tr>
+</thead>
+@foreach (var item in Model)
+{
+<tr>
+<td>@Html.DisplayFor(Item=>item.printer_name)</td>
+<td>@Html.DisplayFor(Item=>item.SerialNumber)</td>
+<td>@Html.DisplayFor(Item=>item.model)</td>
+<td>@Html.DisplayFor(Item=>item.IPAddress)</td>
+<td>@Html.DisplayFor(Item=>item.PageCount)</td>
+<td @TDHtmlHelper.TDTonerLevel(item.PercentBlack)>@Html.DisplayFor(Item=>item.PercentBlack)%</td>
+<td>@Html.DisplayFor(Item=>item.DisplayMessage)</td>
+<td>@Html.DisplayFor(Item=>item.AlertMessage)</td>
+<td>@TDHtmlHelper.UptimeHelper(item.Uptime)</td>
+<td>@Html.DisplayFor(Item=>item.LastUpdate)</td>
+</tr>
+    
+    
+}
+</table>
+</div>
+</div>

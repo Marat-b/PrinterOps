@@ -1,0 +1,113 @@
+﻿@using PrOps.Classes
+@model IEnumerable<PrOps.sp_SEL_TONERResult>
+
+@{
+    ViewBag.Title = "Общее состояние тонера";
+}
+
+<div class="page-header"><h3>Общее состояние тонера</h3></div>
+
+<div class="row-fluid">
+<div class="span10">
+<table class="table table-bordered">
+<thead>
+
+<tr>
+<th rowspan="2">Номер филиала</th>
+<th rowspan="2">Серийный номер</th>
+<th rowspan="2">Модель</th>
+<th rowspan="2">IP адрес</th>
+<th rowspan="2">Кол-во распечатанных страниц</th>
+<th rowspan="2">Кол-во замен картриджа</th>
+<th colspan="3">Чёрный</th>
+<th colspan="3">Голубой</th>
+<th colspan="3">Фиолетовый</th>
+<th colspan="3">Жёлтый</th>
+<th rowspan="2">Последнее обновление</th>
+</tr>
+<tr>
+<th>Максимальный уровень</th>
+<th>Оставшийся уровень</th>
+<th>Оставшийся уровень в %</th>
+<th>Максимальный уровень</th>
+<th>Оставшийся уровень</th>
+<th>Оставшийся уровень в %</th>
+<th>Максимальный уровень</th>
+<th>Оставшийся уровень</th>
+<th>Оставшийся уровень в %</th>
+<th>Максимальный уровень</th>
+<th>Оставшийся уровень</th>
+<th>Оставшийся уровень в %</th>
+
+
+</tr>
+</thead>
+@foreach (var item in Model)
+{
+    <tr>
+<td>@Html.DisplayFor(Item=>item.BranchNumber)</td>
+<td>@Html.DisplayFor(Item=>item.SerialNumber)</td>
+<td>@Html.DisplayFor(Item=>item.model)</td>
+<td>@Html.DisplayFor(Item=>item.IPAddress)</td>
+<td>@Html.DisplayFor(Item=>item.PageCount)</td>
+<td><a class="aCC" href="#replaceCount" data-toggle="modal"> @Html.DisplayFor(Item => item.ReplaceCount)</a></td>
+<td @TDHtmlHelper.TDHelper(item.MaxLevelBlack,item.PercentBlack)>@Html.DisplayFor(Item=>item.MaxLevelBlack)</td>
+<td @TDHtmlHelper.TDHelper(item.MaxLevelBlack,item.PercentBlack)>@Html.DisplayFor(Item=>item.RemainBlack)</td>
+<td @TDHtmlHelper.TDHelper(item.MaxLevelBlack, item.PercentBlack)>@Html.DisplayFor(Item=>item.PercentBlack)%</td>
+<td @TDHtmlHelper.TDHelper(item.MaxLevelCyan, item.PercentCyan)>@Html.DisplayFor(Item=>item.MaxLevelCyan)</td>
+<td @TDHtmlHelper.TDHelper(item.MaxLevelCyan, item.PercentCyan)>@Html.DisplayFor(Item=>item.RemainCyan)</td>
+<td @TDHtmlHelper.TDHelper(item.MaxLevelCyan, item.PercentCyan)>@Html.DisplayFor(Item=>item.PercentCyan)%</td>
+<td @TDHtmlHelper.TDHelper(item.MaxLevelMagenta, item.PercentMagenta)>@Html.DisplayFor(Item=>item.MaxLevelMagenta)</td>
+<td @TDHtmlHelper.TDHelper(item.MaxLevelMagenta, item.PercentMagenta)>@Html.DisplayFor(Item => item.RemainMagenta)</td>
+<td @TDHtmlHelper.TDHelper(item.MaxLevelMagenta, item.PercentMagenta)>@Html.DisplayFor(Item => item.PercentMagenta)%</td>
+<td @TDHtmlHelper.TDHelper(item.MaxLevelYellow, item.PercentYellow)>@Html.DisplayFor(Item=>item.MaxLevelYellow)</td>
+<td @TDHtmlHelper.TDHelper(item.MaxLevelYellow, item.PercentYellow)>@Html.DisplayFor(Item => item.RemainYellow)</td>
+<td @TDHtmlHelper.TDHelper(item.MaxLevelYellow, item.PercentYellow)>@Html.DisplayFor(Item => item.PercentYellow)%</td>
+<td>@Html.DisplayFor(Item=>item.LastUpdate)</td>
+    </tr>
+    
+    
+}
+</table>
+</div>
+</div>
+
+<div class="modal hide fade" id="replaceCount" tabindex="-1" role="dialog" aria-labelledby="replaceCountLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+        <div class="well">
+        <h3 id="replaceCountLabel">Количество замен катриджа</h3><span id="printerName" class="label label-info"></span>
+        <span class="label" id="logicalName"></span><span> </span><span class="label" id="addressIP"></span>
+       </div>
+    </div>
+    <div class="modal-body">
+        <div id="replaceCountTable"></div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Закрыть</button>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+//alert("Test");
+    $(document).ready(function () {
+        //alert("Document is ready!");
+        $(".aCC").click(function (event) {
+            event.preventDefault();
+            //alert($(this).text());
+            mycell = $(this).parent();
+            myrow = mycell.parent().children();
+            $("#logicalName").empty();
+            $("#logicalName").append(myrow.eq(0).text());
+            $("#printerName").empty();
+            $("#printerName").append(myrow.eq(2).text());
+            $("#addressIP").empty();
+            $("#addressIP").append(myrow.eq(3).text());
+            siteRoot="@Url.Content("~/")";
+            $("#replaceCountTable").load(siteRoot + "PrinterToner/ChargeCartridge?SerialNumber=" + myrow.eq(1).text());
+        });
+    });
+
+</script>
+

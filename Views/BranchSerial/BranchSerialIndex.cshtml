@@ -1,0 +1,50 @@
+﻿@model IEnumerable<PrOps.Models.BranchSerialInputModel>
+
+@{
+    ViewBag.Title = "Принтеры в филиалах";
+}
+
+<h2>Принадлежность принтеров филалам</h2>
+
+<p>
+   
+</p>
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SerialNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Model)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IPAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BranchNumber)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SerialNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IPAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BranchNumber)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "BranchSerialEdit", new {  SerialNumber=item.SerialNumber  }) 
+           
+        </td>
+    </tr>
+}
+
+</table>

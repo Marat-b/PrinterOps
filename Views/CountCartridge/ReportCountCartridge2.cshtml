@@ -1,0 +1,44 @@
+﻿@model IEnumerable<PrOps.Models.ReportCartridgeStateView2>
+
+@{
+    ViewBag.Title = "Отчёт для филиалов";
+    Layout = "~/Views/Shared/_PrinterOpsReport.cshtml";
+}
+
+<h2>Заявка на тонер-картриджи с разбивкой по филиалам, на @ViewBag.inputDate</h2>
+
+<p>
+    
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            Филиал
+        </th>
+        <th>
+            Модель
+        </th>
+        <th>
+            Количество
+        </th>
+        
+        
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BranchNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Model)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sum)
+        </td>
+        
+       
+    </tr>
+}
+
+</table>
